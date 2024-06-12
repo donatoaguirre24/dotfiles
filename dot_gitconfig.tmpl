@@ -1,0 +1,37 @@
+[alias]
+	hide = update-index --assume-unchanged
+	unhide = update-index --no-assume-unchanged
+	hidden = !git ls-files -v | grep \"^[a-z]\"
+	ignored = !git status -s --ignored | grep \"^!!\"
+	repush = !git add --all && git commit --amend --no-edit && git push --force-with-lease
+	squash = !git reset --soft
+
+[color]
+	ui = true
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+	ignorecase = false
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+
+[http]
+	followRedirects = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+
+[push]
+	autoSetupRemote = true
+
+[user]
+	email = {{ .email }}
+	name = Donato Aguirre

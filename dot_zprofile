@@ -1,0 +1,27 @@
+#!/bin/sh
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZSHZ_DATA="$XDG_STATE_HOME/z"
+
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
+
+export N_PREFIX="$XDG_DATA_HOME/n" # /usr/local/bin/node -> $N_PREFIX/bin/node
+export N_CACHE_PREFIX="$XDG_CACHE_HOME"
+export N_PRESERVE_COREPACK=1
+export N_PRESERVE_NPM=1
+
+export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
+
+export EDITOR="code --wait"
+export VISUAL="code"
+export LANG="en_US.UTF-8"
+export LANGUAGE="en"
+export LC_ALL="en_US.UTF-8"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
