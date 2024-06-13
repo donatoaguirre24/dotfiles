@@ -9,7 +9,7 @@
 2. Install Chezmoi
 
     ```sh
-    sh -c "$(curl -fsLS get.chezmoi.io)"
+    sh -c "$(curl -fsLS get.chezmoi.io/lb)"
     ```
 
 3. Initialize Chezmoi using the dotfiles repository

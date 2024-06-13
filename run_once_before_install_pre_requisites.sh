@@ -9,6 +9,12 @@ if ! command -v brew >/dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Install Mise if it's not already installed
+if ! command -v mise >/dev/null; then
+  echo "Installing Mise"
+  curl https://mise.run | sh
+fi
+
 # Install Zap if it's not already installed
 ZAP_FUNCTION="$HOME/.local/share/zap/zap.zsh"
 
