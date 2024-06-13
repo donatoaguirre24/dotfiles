@@ -10,6 +10,7 @@ brew "git"
 brew "mas"
 brew "redis"
 brew "ripgrep"
+brew "ruby-build" # Required for Mise to install Ruby
 brew "telnet"
 brew "tree"
 brew "watchman"

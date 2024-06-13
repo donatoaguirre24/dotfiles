@@ -1,14 +1,11 @@
 #!/bin/sh
 
-typeset -U path # Prevents duplicate entries on the PATH
-
 # Plugins
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 source "$XDG_DATA_HOME/zap/zap.zsh"
-eval "$(rbenv init - zsh)"
 
 plug "zap-zsh/supercharge"
 plug "agkozak/zsh-z"
@@ -22,15 +19,6 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     plug "romkatv/powerlevel10k"
     plug "$ZDOTDIR/.p10k.zsh"
 fi
-
-# Path
-path+=$N_PREFIX/bin
-path+=$ANDROID_HOME/tools/bin
-path+=$ANDROID_HOME/tools
-path+=$ANDROID_HOME/platform-tools
-path+=$ANDROID_HOME/emulator
-path=('/opt/homebrew/bin' '/opt/homebrew/sbin' $path) # Ensure Homebrew installed binaries take precedence
-export PATH # Export to sub-processes (make it inherited by child processes)
 
 # Key bindings
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
