@@ -30,3 +30,9 @@
     brew bundle check --file=$(chezmoi source-path)/Brewfile
     brew bundle --file=$(chezmoi source-path)/Brewfile
     ```
+
+6. Install Mise tools
+
+    ```sh
+    mise install
+    ```
