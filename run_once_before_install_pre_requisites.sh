@@ -20,9 +20,9 @@ ZAP_FUNCTION="$HOME/.local/share/zap/zap.zsh"
 
 if [ -f $ZAP_FUNCTION ]; then
   source $ZAP_FUNCTION
+fi
 
-  if ! command -v zap >/dev/null; then
-    echo "Installing Zap"
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) -k -b release-v1
-  fi
+if ! command -v zap >/dev/null; then
+  echo "Installing Zap"
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) -k -b release-v1
 fi

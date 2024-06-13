@@ -15,13 +15,13 @@
 3. Initialize Chezmoi using the dotfiles repository
 
     ```sh
-    chezmoi init https://github.com/donatoaguirre24/dotfiles.git
+    $HOME/.local/bin/chezmoi init https://github.com/donatoaguirre24/dotfiles.git
     ```
 
 4. Create dotfiles and run scripts
 
     ```sh
-    chezmoi apply -v
+    $HOME/.local/bin/chezmoi apply -v
     ```
 
 5. Install the software listed in the Brewfile
