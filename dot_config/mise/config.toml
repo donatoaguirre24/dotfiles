@@ -1,3 +1,5 @@
 [tools]
 node = "lts"
-ruby = "3.2"
+java = "zulu-17"
+python = "3"
+ruby = "3"

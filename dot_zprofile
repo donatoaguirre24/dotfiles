@@ -13,6 +13,7 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
 
 export MISE_DIR="$XDG_CONFIG_HOME/mise"
 export MISE_NODE_DEFAULT_PACKAGES_FILE="$MISE_DIR/.default-npm-packages"
+export MISE_PYTHON_DEFAULT_PACKAGES_FILE="$MISE_DIR/.default-python-packages"
 export MISE_RUBY_DEFAULT_PACKAGES_FILE="$MISE_DIR/.default-gems"
 
 export EDITOR="code --wait"
@@ -25,7 +26,6 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/.local/share/mise/shims:$PATH" # Activate Mise shims
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
