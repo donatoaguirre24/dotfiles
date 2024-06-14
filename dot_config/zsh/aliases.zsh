@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 alias brewery="brew update && brew upgrade && brew upgrade --cask && brew cleanup"
 alias c="clear"
 alias cdd="trash ~/Library/Developer/Xcode/DerivedData/*"
@@ -10,6 +12,7 @@ alias show_path="tr ':' '\n' <<< \"$PATH\""
 alias speedtest="networkQuality"
 alias zshconfig="code $ZDOTDIR/.zshrc"
 
+# Function to update tools and packages
 function update_all() {
   # Update Zap packages
   zap update all

@@ -16,10 +16,8 @@ if ! command -v mise >/dev/null; then
 fi
 
 # Install Zap if it's not already installed
-ZAP_FUNCTION="$HOME/.local/share/zap/zap.zsh"
-
-if [ -f $ZAP_FUNCTION ]; then
-  source $ZAP_FUNCTION
+if [[ -f "$HOME/.local/share/zap/zap.zsh" ]]; then
+  source "$HOME/.local/share/zap/zap.zsh"
 fi
 
 if ! command -v zap >/dev/null; then
