@@ -21,6 +21,9 @@ defaults write com.apple.dock "show-recents" -bool "false"
 # Autohide the Dock when the mouse is out
 defaults write com.apple.dock "autohide" -bool "true"
 
+# Remove the Dock autohide delay, so the Dock appears instantly
+defaults write com.apple.dock "autohide-delay" -float "0"
+
 # Do not reorder Spaces based on use
 defaults write com.apple.dock "mru-spaces" -bool "false"
 
