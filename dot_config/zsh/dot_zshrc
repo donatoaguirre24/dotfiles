@@ -12,8 +12,11 @@ if [[ -f "$XDG_DATA_HOME/zap/zap.zsh" ]]; then
   source "$XDG_DATA_HOME/zap/zap.zsh"
 fi
 
+fpath+=("$XDG_DATA_HOME/zsh/site-functions")
+
 plug "zap-zsh/supercharge" # Must be first for other plugins to work
 plug "agkozak/zsh-z"
+plug "greymd/docker-zsh-completion"
 plug "chivalryq/git-alias"
 plug "$ZDOTDIR/aliases.zsh"
 
