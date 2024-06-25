@@ -65,6 +65,7 @@ mas "Dato", id: 1470584107
 mas "Developer", id: 640199958
 mas "Craft", id: 1487937127
 mas "Microsoft Excel", id: 462058435
+mas "MoneyWiz", id: 1511185140
 mas "PDF Viewer", id: 1120099014
 mas "Playgrounds", id: 1496833156
 mas "TestFlight", id: 899247664
