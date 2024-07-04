@@ -12,22 +12,65 @@ if [[ -f "$XDG_DATA_HOME/zap/zap.zsh" ]]; then
   source "$XDG_DATA_HOME/zap/zap.zsh"
 fi
 
-fpath+=("$XDG_DATA_HOME/zsh/site-functions")
+# Load completions
+autoload -Uz compinit && compinit
 
-plug "zap-zsh/supercharge" # Must be first for other plugins to work
-plug "agkozak/zsh-z"
+# Plugins
+autoload -Uz plug
+
+plug "zsh-users/zsh-completions"
 plug "greymd/docker-zsh-completion"
 plug "chivalryq/git-alias"
-plug "$ZDOTDIR/aliases.zsh"
 
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
   plug "romkatv/powerlevel10k"
+  plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
   plug "zsh-users/zsh-autosuggestions"
-  plug "zsh-users/zsh-history-substring-search"
   plug "zsh-users/zsh-syntax-highlighting"
+  plug "zsh-users/zsh-history-substring-search"
 fi
 
+# Keybindings
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
   bindkey "^[[A" history-substring-search-up
   bindkey "^[[B" history-substring-search-down
 fi
+
+# General settings
+unsetopt BEEP               # Disable the bell
+setopt AUTO_CD              # Change the directory without cd
+setopt INTERACTIVE_COMMENTS # Allow comments in interactive shells
+
+# History
+HISTFILE="$ZDOTDIR/.zsh_history"
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+setopt APPEND_HISTORY         # Append entries to the history as they are executed
+setopt EXTENDED_HISTORY       # Write the history file in the ":start:elapsed;command" format
+setopt SHARE_HISTORY          # Share history between all sessions
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history
+setopt HIST_FIND_NO_DUPS      # Do not display a line previously found
+setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate
+setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again
+setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space
+setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry
+setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries in the history file
+setopt HIST_VERIFY            # Don't execute immediately upon history expansion
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'      # Case-insensitive completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"     # Enable filename colorizing
+zstyle ':completion:*' menu no                              # Disable menu completion
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd $realpath' # Use lsd to preview contents
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd $realpath'  # Complete zoxide's paths
+zstyle ':fzf-tab:*' switch-group '<' '>'                    # Use arrows to switch between groups
+
+# Custom completions
+source "$ZDOTDIR/completions.zsh"
+
+# Aliases
+source "$ZDOTDIR/aliases.zsh"
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"

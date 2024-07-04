@@ -1,28 +1,40 @@
 #!/usr/bin/env zsh
 
+# General
 alias brewery="brew update && brew upgrade && brew upgrade --cask && brew cleanup"
 alias c="clear"
-alias cdd="trash ~/Library/Developer/Xcode/DerivedData/*"
 alias dotfiles="code $(chezmoi source-path)"
-alias gitconfig="code $HOME/.gitconfig"
-alias reload="source $ZDOTDIR/.zshrc"
-alias rm="trash"
+alias reload="source $ZSHRC"
 alias show_packages_size="du -sh ./node_modules/* | sort -nr | rg '\dM.*'"
 alias show_path="tr ':' '\n' <<< \"$PATH\""
 alias speedtest="networkQuality"
-alias zshconfig="code $ZDOTDIR/.zshrc"
+alias update_all="zap update all && chezmoi upgrade && mise self-update && brewery"
 
-# Function to update tools and packages
-function update_all() {
-  # Update Zap packages
-  zap update all
+# AWS CLI
+alias use-aws-prod="export AWS_PROFILE=production"
+alias use-aws-staging="export AWS_PROFILE=staging"
+alias use-aws-dev="export AWS_PROFILE=development"
+alias which-aws="echo $AWS_PROFILE"
 
-  # Update Chezmoi
-  chezmoi upgrade
+# Mobile Development
+alias cdd="trash ~/Library/Developer/Xcode/DerivedData/*"
+alias boot_simulator="xcrun simctl boot 5AE9CAD8-A410-4603-BC6E-A7292BEBEAB0 --arch=x86_64 && open -a Simulator"
+alias boot_emulator="emulator @Pixel_8_API_34 -no-boot-anim -no-snapshot -netdelay none -netspeed full"
 
-  # Update Mise
-  mise self-update
+# LSD
+if (( $+commands[lsd] )); then
+  alias ls='lsd'
+  alias ll='lsd -l'
+  alias la='lsd -la'
+  alias tree='lsd -l --tree --depth=2'
+fi
 
-  # Update Homebrew formulas and casks
-  brewery
-}
+# Trash
+if (( $+commands[trash] )); then
+  alias rm="trash"
+fi
+
+# Zoxide
+if (( $+commands[zoxide] )); then
+  alias cd='z'
+fi

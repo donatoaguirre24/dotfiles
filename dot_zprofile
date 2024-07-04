@@ -29,4 +29,5 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="$MISE_DATA_HOME/shims:$PATH" # Ensure mise's binaries take precedence
+export PATH="$MISE_DATA_HOME/shims:$PATH" # Ensure mise's binaries take precedence over brew's
+export PATH="$HOME/.local/bin:$PATH"

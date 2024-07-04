@@ -3,16 +3,19 @@ tap "homebrew/bundle"
 
 # Binaries
 brew "btop"
+brew "fzf"
 brew "gh"
 brew "git"
+brew "lsd"
 brew "mas"
 brew "redis"
 brew "ripgrep"
 brew "ruby-build" # Required for Mise to install Ruby
 brew "telnet"
-brew "tree"
+brew "tlrc"
 brew "watchman"
 brew "zsh"
+brew "zoxide"
 
 # Fonts
 cask "font-cascadia-mono"
