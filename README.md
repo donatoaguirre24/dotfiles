@@ -6,32 +6,20 @@
     xcode-select --install
     ```
 
-2. Install Chezmoi
+2. Install Chezmoi, Homebrew, and bootstrap dotfiles
 
     ```sh
-    sh -c "$(curl -fsLS get.chezmoi.io/lb)"
+    sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply donatoaguirre24
     ```
 
-3. Initialize Chezmoi using the dotfiles repository
+3. Install the software listed in ~/.Brewfile
 
     ```sh
-    $HOME/.local/bin/chezmoi init https://github.com/donatoaguirre24/dotfiles.git
+    brew bundle check --global
+    brew bundle --global --no-lock
     ```
 
-4. Create dotfiles and run scripts
-
-    ```sh
-    $HOME/.local/bin/chezmoi apply -v
-    ```
-
-5. Install the software listed in the Brewfile
-
-    ```sh
-    brew bundle check --file=$(chezmoi source-path)/Brewfile
-    brew bundle --file=$(chezmoi source-path)/Brewfile
-    ```
-
-6. Install Mise tools
+4. Install Mise tools
 
     ```sh
     mise install
