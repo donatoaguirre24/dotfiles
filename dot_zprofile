@@ -6,7 +6,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export ZSHZ_DATA="$XDG_STATE_HOME/z"
 
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export JAVA_HOME="$(/usr/libexec/java_home -v 17)"

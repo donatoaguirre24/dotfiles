@@ -1,5 +1,4 @@
 @antfu/ni
-depcheck
 npm-check-updates
 pm2
 trash-cli

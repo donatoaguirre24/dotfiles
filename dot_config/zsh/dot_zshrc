@@ -65,12 +65,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd $realpath' # Use lsd to preview
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd $realpath'  # Complete zoxide's paths
 zstyle ':fzf-tab:*' switch-group '<' '>'                    # Use arrows to switch between groups
 
-# Custom completions
+# Completions
 source "$ZDOTDIR/completions.zsh"
 
 # Aliases
 source "$ZDOTDIR/aliases.zsh"
 
 # Shell integrations
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 eval "$(zoxide init zsh)"
