@@ -18,7 +18,7 @@ alias which-aws="echo $AWS_PROFILE"
 
 # Mobile Development
 alias boot_emulator="emulator @Pixel_8_API_34 -no-boot-anim -no-snapshot -netdelay none -netspeed full"
-alias boot_simulator="xcrun simctl boot 5AE9CAD8-A410-4603-BC6E-A7292BEBEAB0 --arch=x86_64 && open -a Simulator"
+alias boot_simulator="xcrun simctl boot E87FC0D4-12FB-494E-99D8-2A7F4D7CB91C --arch=x86_64 && open -a Simulator"
 alias cdd="trash ~/Library/Developer/Xcode/DerivedData/*"
 
 # LSD
