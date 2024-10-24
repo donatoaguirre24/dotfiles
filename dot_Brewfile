@@ -2,6 +2,7 @@
 tap "homebrew/bundle"
 
 # Binaries
+brew "aviator-co/tap/av"
 brew "btop"
 brew "fd"
 brew "fzf"

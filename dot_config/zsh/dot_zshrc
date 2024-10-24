@@ -72,5 +72,6 @@ source "$ZDOTDIR/completions.zsh"
 source "$ZDOTDIR/aliases.zsh"
 
 # Shell integrations
+source <(av completion zsh)
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
