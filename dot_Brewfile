@@ -69,13 +69,19 @@ cask "xcodes"
 cask "zoom"
 
 # App Store
+mas "AdGuard for Safari", id: 1440147259
+mas "1Password for Safari", id: 1569813296
 mas "DaisyDisk", id: 411643860
 mas "Dato", id: 1470584107
 mas "Developer", id: 640199958
 mas "Craft", id: 1487937127
+mas "Hush", id: 1544743900
 mas "Kindle", id: 302584613
 mas "Microsoft Excel", id: 462058435
 mas "MoneyWiz", id: 1511185140
+mas "Noir", id: 1592917505
 mas "PDF Viewer", id: 1120099014
 mas "Playgrounds", id: 1496833156
+mas "Save to Raindrop.io", id: 1549370672
+mas "Save to Reader", id: 1640236961
 mas "TestFlight", id: 899247664
