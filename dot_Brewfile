@@ -54,6 +54,7 @@ cask "loom"
 cask "monitorcontrol"
 cask "mullvadvpn"
 cask "notion"
+cask "obsidian"
 cask "postman"
 cask "proxyman"
 cask "raycast"
@@ -72,7 +73,6 @@ cask "zoom"
 mas "DaisyDisk", id: 411643860
 mas "Dato", id: 1470584107
 mas "Developer", id: 640199958
-mas "Craft", id: 1487937127
 mas "Kindle", id: 302584613
 mas "Microsoft Excel", id: 462058435
 mas "MoneyWiz", id: 1511185140
