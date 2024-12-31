@@ -8,7 +8,7 @@ alias reload="source $ZSHRC"
 alias show_packages_size="du -sh ./node_modules/* | sort -nr | rg '\dM.*'"
 alias show_path="tr ':' '\n' <<< \"$PATH\""
 alias speedtest="networkQuality"
-alias update_all="zap update all && chezmoi upgrade && mise self-update && brewery"
+alias update_all="zap update all && chezmoi upgrade && mise self-update --yes && brewery"
 
 # AWS CLI
 alias use-aws-prod="export AWS_PROFILE=production"
