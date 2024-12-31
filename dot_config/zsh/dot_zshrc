@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
 
 if [[ -f "$ZDOTDIR/.p10k.zsh" ]]; then
   source "$ZDOTDIR/.p10k.zsh"
@@ -21,20 +19,15 @@ autoload -Uz plug
 plug "zsh-users/zsh-completions"
 plug "greymd/docker-zsh-completion"
 plug "chivalryq/git-alias"
-
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  plug "romkatv/powerlevel10k"
-  plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
-  plug "zsh-users/zsh-autosuggestions"
-  plug "zsh-users/zsh-syntax-highlighting"
-  plug "zsh-users/zsh-history-substring-search"
-fi
+plug "romkatv/powerlevel10k"
+plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
 
 # Keybindings
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  bindkey "^[[A" history-substring-search-up
-  bindkey "^[[B" history-substring-search-down
-fi
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 # General settings
 unsetopt BEEP               # Disable the bell
@@ -74,4 +67,4 @@ source "$ZDOTDIR/aliases.zsh"
 # Shell integrations
 source <(av completion zsh)
 source <(fzf --zsh)
-eval "$(zoxide init zsh)"
+source <(zoxide init zsh)
