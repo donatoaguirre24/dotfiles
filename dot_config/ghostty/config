@@ -2,5 +2,6 @@ adjust-cursor-thickness = 1
 font-family = MesloLGM Nerd Font Mono
 font-feature = -calt
 font-feature = -liga
+keybind = cmd+backspace=esc:w
 keybind = super+f=write_screen_file:open
 theme = dark:Builtin Pastel Dark, light:Builtin Light
