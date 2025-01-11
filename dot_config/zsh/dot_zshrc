@@ -65,6 +65,9 @@ source "$ZDOTDIR/completions.zsh"
 # Aliases
 source "$ZDOTDIR/aliases.zsh"
 
+# Functions
+source "$ZDOTDIR/functions.zsh"
+
 # Shell integrations
 source <(av completion zsh)
 source <(fzf --zsh)

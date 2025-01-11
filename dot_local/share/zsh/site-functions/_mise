@@ -16,10 +16,10 @@ _mise() {
   local curcontext="$curcontext" spec cache_policy
 
   if ! command -v usage &> /dev/null; then
-      echo >&2
-      echo "Error: usage CLI not found. This is required for completions to work in mise." >&2
-      echo "See https://usage.jdx.dev for more information." >&2
-      return 1
+    echo >&2
+    echo "Error: usage CLI not found. This is required for completions to work in mise." >&2
+    echo "See https://usage.jdx.dev for more information." >&2
+    return 1
   fi
 
   zstyle -s ":completion:${curcontext}:" cache-policy cache_policy
@@ -39,9 +39,9 @@ _mise() {
 }
 
 if [ "$funcstack[1]" = "_mise" ]; then
-    _mise "$@"
+  _mise "$@"
 else
-    compdef _mise mise
+  compdef _mise mise
 fi
 
 # vim: noet ci pi sts=0 sw=4 ts=4
