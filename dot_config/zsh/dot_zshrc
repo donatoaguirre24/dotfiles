@@ -13,7 +13,7 @@ fi
 # Load completions
 autoload -Uz compinit && compinit
 
-# Plugins
+# ZSH plugins
 autoload -Uz plug
 
 plug "zsh-users/zsh-completions"
@@ -72,3 +72,6 @@ source "$ZDOTDIR/functions.zsh"
 source <(av completion zsh)
 source <(fzf --zsh)
 source <(zoxide init zsh)
+
+# Mise configuration
+eval "$(mise activate zsh)"
