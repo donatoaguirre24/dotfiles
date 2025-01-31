@@ -28,7 +28,7 @@ plug "zsh-users/zsh-history-substring-search"
 # Keybindings
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
-bindkey "\ew" kill-region
+bindkey "\ew" kill-region # Fixes cmd + backspace in Ghostty
 
 # General settings
 unsetopt BEEP               # Disable the bell
