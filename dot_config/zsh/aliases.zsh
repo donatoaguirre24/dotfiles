@@ -15,8 +15,13 @@ alias boot_emulator="emulator @Pixel_8_API_34 -no-boot-anim -no-snapshot -dns-se
 alias boot_simulator="xcrun simctl boot E87FC0D4-12FB-494E-99D8-2A7F4D7CB91C && open -a Simulator"
 alias cdd="trash ~/Library/Developer/Xcode/DerivedData/*"
 
+# FZF
+if [[ -v commands[fd] ]]; then
+  alias find="fd --type f --hidden --follow --exclude .git"
+fi
+
 # LSD
-if (( $+commands[lsd] )); then
+if [[ -v commands[lsd] ]]; then
   alias ls='lsd'
   alias ll='lsd -l'
   alias la='lsd -la'
@@ -24,11 +29,11 @@ if (( $+commands[lsd] )); then
 fi
 
 # Trash
-if (( $+commands[trash] )); then
+if [[ -v commands[trash] ]]; then
   alias rm="trash"
 fi
 
 # Zoxide
-if (( $+commands[zoxide] )); then
+if [[ -v commands[zoxide] ]]; then
   alias cd='z'
 fi
