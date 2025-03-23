@@ -1,18 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = false
-
-[character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[x](bold red)"
+add_newline = true
 
 [cmd_duration]
-min_time = 10_000
-
-# [directory]
-# fish_style_pwd_dir_length = 1
-# repo_root_style = "bold yellow"
-# truncation_length = 2
+min_time = 2_500
 
 [git_commit]
 tag_disabled = false
@@ -22,10 +13,6 @@ disabled = true
 
 [line_break]
 disabled = true
-
-[memory_usage]
-disabled = false
-style = "bold dimmed yellow"
 
 [nodejs]
 disabled = true
