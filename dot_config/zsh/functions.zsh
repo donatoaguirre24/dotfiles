@@ -15,7 +15,7 @@ awsp() {
   fi
 
   if [ "$1" = "open" ]; then
-    code "$HOME/.aws/config"
+    cursor "$HOME/.aws/config"
     return
   fi
 
