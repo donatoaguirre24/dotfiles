@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Add brew binaries completions
-if (( $+commands[brew] )); then
+if [[ -v commands[brew] ]]; then
   # If the 'HOMEBREW_PREFIX' environment variable is not populated then
   # request the prefix from 'brew' and populate it
   if [[ -z "$HOMEBREW_PREFIX" ]]; then
@@ -24,4 +24,18 @@ if [[ -d "$THIRD_PARTY_SITE_FUNCTIONS" ]]; then
 fi
 
 autoload -Uz compinit
-compinit -d "$ZDOTDIR/.zcompdump"
+
+# Only rebuild the completion dump if it's older than 12 hours to speed up shell startup
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+12) ]]; then
+  compinit -d "$ZDOTDIR/.zcompdump"
+else
+  compinit -C -d "$ZDOTDIR/.zcompdump"
+fi
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'      # Case-insensitive completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"     # Enable filename colorizing
+zstyle ':completion:*' menu no                              # Disable menu completion
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd $realpath' # Use lsd to preview contents
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd $realpath'  # Complete zoxide's paths
+zstyle ':fzf-tab:*' switch-group '<' '>'                    # Use arrows to switch between groups

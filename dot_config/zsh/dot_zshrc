@@ -10,21 +10,6 @@ if [[ -f "$XDG_DATA_HOME/zap/zap.zsh" ]]; then
   source "$XDG_DATA_HOME/zap/zap.zsh"
 fi
 
-# Load completions
-autoload -Uz compinit && compinit
-
-# ZSH plugins
-autoload -Uz plug
-
-plug "zsh-users/zsh-completions"
-plug "greymd/docker-zsh-completion"
-plug "chivalryq/git-alias"
-plug "romkatv/powerlevel10k"
-plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
-plug "zsh-users/zsh-autosuggestions"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "zsh-users/zsh-history-substring-search"
-
 # Keybindings
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
@@ -51,14 +36,6 @@ setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry
 setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries in the history file
 setopt HIST_VERIFY            # Don't execute immediately upon history expansion
 
-# Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'      # Case-insensitive completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"     # Enable filename colorizing
-zstyle ':completion:*' menu no                              # Disable menu completion
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd $realpath' # Use lsd to preview contents
-zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd $realpath'  # Complete zoxide's paths
-zstyle ':fzf-tab:*' switch-group '<' '>'                    # Use arrows to switch between groups
-
 # Completions
 source "$ZDOTDIR/completions.zsh"
 
@@ -67,6 +44,17 @@ source "$ZDOTDIR/aliases.zsh"
 
 # Functions
 source "$ZDOTDIR/functions.zsh"
+
+# ZSH plugins
+autoload -Uz plug
+plug "zsh-users/zsh-completions"
+plug "greymd/docker-zsh-completion"
+plug "chivalryq/git-alias"
+plug "romkatv/powerlevel10k"
+plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
 
 # Shell integrations
 source <(av completion zsh)
