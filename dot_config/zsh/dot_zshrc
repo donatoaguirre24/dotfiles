@@ -13,7 +13,7 @@ fi
 # Keybindings
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
-bindkey "\ew" kill-region # Fixes cmd + backspace in Ghostty
+bindkey "\ew" kill-region # Fixes "cmd + delete" in Ghostty
 
 # General settings
 unsetopt BEEP               # Disable the bell

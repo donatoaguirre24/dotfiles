@@ -5,5 +5,7 @@ font-feature = -calt, -liga, -dlig
 font-thicken = true
 font-thicken-strength = 85
 keybind = global:cmd+grave_accent=toggle_quick_terminal
-keybind = super+f=write_screen_file:open
+keybind = cmd+f=write_screen_file:open
+macos-icon = official
+macos-option-as-alt = left
 theme = dark:Builtin Pastel Dark, light:Builtin Light
