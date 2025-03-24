@@ -7,9 +7,10 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export FZF_DEFAULT_COMMAND="fd --color=always --strip-cwd-prefix --follow --hidden --exclude .git"
 export FZF_DEFAULT_OPTS="--ansi"
-export FZF_DEFAULT_COMMAND='fd --type file --color=always --follow --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type=directory"
 
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export JAVA_HOME="$(/usr/libexec/java_home -v 17)"

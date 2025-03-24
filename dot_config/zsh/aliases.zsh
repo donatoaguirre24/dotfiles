@@ -23,8 +23,8 @@ fi
 # LSD
 if [[ -v commands[lsd] ]]; then
   alias ls='lsd'
-  alias ll='lsd -l'
-  alias la='lsd -la'
+  alias ll='lsd -1A'
+  alias la='lsd -lA'
   alias tree='lsd -l --tree --depth=2'
 fi
 
