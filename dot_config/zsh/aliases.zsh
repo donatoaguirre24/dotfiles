@@ -37,3 +37,14 @@ fi
 if [[ -v commands[zoxide] ]]; then
   alias cd='z'
 fi
+
+# Docker
+if [[ -v commands[docker] ]]; then
+  alias dc=dc-fn # defined in functions.zsh
+  alias dcu="docker compose up -d"
+  alias dcd="docker compose down --remove-orphans"
+  alias dcr=dcr-fn # defined in functions.zsh
+  alias dex=dex-fn # defined in functions.zsh
+  alias dps="docker ps"
+  alias dpsa="docker ps -a"
+fi
