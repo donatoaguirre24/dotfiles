@@ -1,21 +1,3 @@
-# AWS profile management
-awsp() {
-  if [ -z "$1" ]; then
-    echo "Usage: awsp [open|list]"
-    return 1
-  fi
-
-  if [ "$1" = "open" ]; then
-    cursor "$HOME/.aws/config"
-    return
-  fi
-
-  if [ "$1" = "list" ]; then
-    grep -E '^\[profile' ~/.aws/config | sed 's/^\[profile //; s/\]//'
-    return
-  fi
-}
-
 # Force rebuild ZSH completions
 rebuild-completions() {
   rm "$ZDOTDIR/.zcompdump"
@@ -24,14 +6,14 @@ rebuild-completions() {
 }
 
 # Docker
-function dc-fn {
+dc-fn() {
   docker compose $*
 }
 
-function dcr-fn {
+dcr-fn() {
   docker compose run $@
 }
 
-function dex-fn {
+dex-fn() {
   docker exec -it $1 ${2:-bash}
 }
