@@ -72,7 +72,6 @@ cask "zoom"
 
 # App Store
 mas "DaisyDisk", id: 411643860
-mas "Dato", id: 1470584107
 mas "Developer", id: 640199958
 mas "Just Press Record", id: 1033342465
 mas "Kindle", id: 302584613
