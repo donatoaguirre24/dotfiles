@@ -2,23 +2,35 @@
 
 add_newline = true
 
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$aws\
+$sudo\
+$cmd_duration\
+$time\
+$os\
+$container\
+$character"""
+
 [cmd_duration]
 min_time = 2_500
 
+[directory]
+truncate_to_repo = false
+truncation_length = 5
+truncation_symbol = "…/"
+style = "cyan"
+repo_root_style = "bold cyan"
+
 [git_commit]
 tag_disabled = false
-
-[java]
-disabled = true
-
-[line_break]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[ruby]
-disabled = true
 
 [sudo]
 disabled = false
