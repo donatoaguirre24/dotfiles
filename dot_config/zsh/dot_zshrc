@@ -1,11 +1,5 @@
 #!/usr/bin/env zsh
 
-source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
-
-if [[ -f "$ZDOTDIR/.p10k.zsh" ]]; then
-  source "$ZDOTDIR/.p10k.zsh"
-fi
-
 if [[ -f "$XDG_DATA_HOME/zap/zap.zsh" ]]; then
   source "$XDG_DATA_HOME/zap/zap.zsh"
 fi
@@ -50,7 +44,6 @@ autoload -Uz plug
 plug "zsh-users/zsh-completions"
 plug "greymd/docker-zsh-completion"
 plug "chivalryq/git-alias"
-plug "romkatv/powerlevel10k"
 plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
@@ -61,5 +54,5 @@ source <(av completion zsh)
 source <(fzf --zsh)
 source <(zoxide init zsh)
 
-# Mise configuration
 eval "$(mise activate zsh)"
+eval "$(starship init zsh)"

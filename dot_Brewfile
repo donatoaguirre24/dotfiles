@@ -13,6 +13,7 @@ brew "lsd"
 brew "mas"
 brew "ripgrep"
 brew "ruby-build" # Required for Mise to install Ruby
+brew "starship"
 brew "telnet"
 brew "tlrc"
 brew "watchman"
