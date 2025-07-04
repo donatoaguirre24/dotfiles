@@ -1,11 +1,10 @@
 adjust-cursor-thickness = 1
 copy-on-select = clipboard
-font-family = MesloLGM Nerd Font Mono
 font-feature = -calt, -liga, -dlig
 font-thicken = true
-font-thicken-strength = 85
+font-thicken-strength = 75
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = cmd+f=write_screen_file:open
 macos-icon = official
 macos-option-as-alt = left
-theme = dark:Builtin Pastel Dark, light:Builtin Light
+theme = light:Adwaita, dark:Adwaita Dark
