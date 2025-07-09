@@ -16,7 +16,7 @@ if [[ -v commands[brew] ]]; then
   fi
 fi
 
-# Add third party site-functions directory to the FPATH (e.g. chezmoi, mise)
+# Add third party site-functions directory to the FPATH (e.g. chezmoi, docker, mise, etc.)
 local THIRD_PARTY_SITE_FUNCTIONS="$XDG_DATA_HOME/zsh/site-functions"
 
 if [[ -d "$THIRD_PARTY_SITE_FUNCTIONS" ]]; then
