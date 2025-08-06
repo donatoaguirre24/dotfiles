@@ -41,7 +41,6 @@ source "$ZDOTDIR/functions.zsh"
 
 # ZSH plugins
 autoload -Uz plug
-plug "zsh-users/zsh-completions"
 plug "chivalryq/git-alias"
 plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
 plug "zsh-users/zsh-autosuggestions"
