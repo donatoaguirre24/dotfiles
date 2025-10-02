@@ -1,6 +1,6 @@
 adjust-cursor-thickness = 1
 copy-on-select = clipboard
-font-feature = -calt, -liga, -dlig
+font-feature = -calt
 font-thicken = true
 font-thicken-strength = 75
 keybind = global:cmd+grave_accent=toggle_quick_terminal
