@@ -27,11 +27,11 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en"
 export LC_ALL="en_US.UTF-8"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="$MISE_DATA_DIR/shims:$PATH" # Ensure mise's binaries take precedence over brew's
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH" # Add local binaries like Mise and Chezmoi to the PATH
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(mise activate zsh --shims)" # Ensure Mise's binaries take precedence over Homebrew's

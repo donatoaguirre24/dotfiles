@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
-if [[ -f "$XDG_DATA_HOME/zap/zap.zsh" ]]; then
-  source "$XDG_DATA_HOME/zap/zap.zsh"
-fi
+[ -f "$XDG_DATA_HOME/zap/zap.zsh" ] && source "$XDG_DATA_HOME/zap/zap.zsh"
 
 # Keybindings
 bindkey "^[[A" history-substring-search-up
@@ -40,7 +38,6 @@ source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/functions.zsh"
 
 # ZSH plugins
-autoload -Uz plug
 plug "chivalryq/git-alias"
 plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
 plug "zsh-users/zsh-autosuggestions"
