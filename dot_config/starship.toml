@@ -29,8 +29,5 @@ truncation_symbol = "…/"
 style = "cyan"
 repo_root_style = "bold cyan"
 
-[git_branch]
-symbol = ""
-
 [git_commit]
 tag_disabled = false
