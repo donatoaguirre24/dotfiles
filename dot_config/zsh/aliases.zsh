@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # General
-alias brewery='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
+alias brewery='brew update && brew upgrade && brew upgrade --cask && mas upgrade && brew cleanup'
 alias c='clear'
 alias dotfiles="cursor $(chezmoi source-path)"
 alias reload="source $ZSHRC"
@@ -12,8 +12,6 @@ alias speedtest='networkQuality'
 alias update_all='zap update all && chezmoi upgrade && mise self-update --yes && brewery'
 
 # Mobile Development
-alias boot_emulator='emulator @Pixel_8_API_34 -no-boot-anim -no-snapshot -dns-server 8.8.8.8'
-alias boot_simulator='xcrun simctl boot E87FC0D4-12FB-494E-99D8-2A7F4D7CB91C && open -a Simulator'
 alias cdd='trash ~/Library/Developer/Xcode/DerivedData/*'
 
 # FZF

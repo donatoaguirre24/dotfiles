@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export XDG_BIN_HOME="$HOME/.local/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -31,7 +32,7 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="$HOME/.local/bin:$PATH" # Add local binaries like Mise and Chezmoi to the PATH
+export PATH="$XDG_BIN_HOME:$PATH" # Add local binaries like Mise and Chezmoi to the PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(mise activate zsh --shims)" # Ensure Mise's binaries take precedence over Homebrew's
