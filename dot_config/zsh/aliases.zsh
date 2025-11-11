@@ -3,6 +3,7 @@
 # General
 alias brewery='brew update && brew upgrade && brew upgrade --cask && mas upgrade && brew cleanup'
 alias c='clear'
+alias cdd='trash ~/Library/Developer/Xcode/DerivedData/*'
 alias dotfiles="cursor $(chezmoi source-path)"
 alias reload="source $ZSHRC"
 alias show_packages_size='du -sh ./node_modules/* | sort -nr | rg "\dM.*"'
@@ -11,12 +12,25 @@ alias show_path_expanded='print -l $path' # Like show_path, but with ZSH hooks a
 alias speedtest='networkQuality'
 alias update_all='zap update all && chezmoi upgrade && mise self-update --yes && brewery'
 
-# Mobile Development
-alias cdd='trash ~/Library/Developer/Xcode/DerivedData/*'
-
 # FZF
 if [[ -v commands[fd] ]]; then
   alias find='fd --type f --hidden --follow --exclude .git'
+fi
+
+# Docker
+if [[ -v commands[docker] ]]; then
+  alias dc=dc-fn # defined in functions.zsh
+  alias dcu='docker compose up -d'
+  alias dcd='docker compose down --remove-orphans'
+  alias dcr=dcr-fn # defined in functions.zsh
+  alias dex=dex-fn # defined in functions.zsh
+  alias dps='docker ps'
+  alias dpsa='docker ps -a'
+fi
+
+# Lazygit
+if [[ -v commands[lazygit] ]]; then
+  alias lg='lazygit'
 fi
 
 # LSD
@@ -35,15 +49,4 @@ fi
 # Zoxide
 if [[ -v commands[zoxide] ]]; then
   alias cd='z'
-fi
-
-# Docker
-if [[ -v commands[docker] ]]; then
-  alias dc=dc-fn # defined in functions.zsh
-  alias dcu='docker compose up -d'
-  alias dcd='docker compose down --remove-orphans'
-  alias dcr=dcr-fn # defined in functions.zsh
-  alias dex=dex-fn # defined in functions.zsh
-  alias dps='docker ps'
-  alias dpsa='docker ps -a'
 fi
