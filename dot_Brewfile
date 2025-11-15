@@ -26,9 +26,8 @@ brew "zsh"
 cask "font-cascadia-mono"
 cask "font-cascadia-mono-nf"
 cask "font-commit-mono"
-cask "font-fira-code"
 cask "font-jetbrains-mono"
-cask "font-meslo-lg-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
 
 # Apps
@@ -78,7 +77,6 @@ mas "DaisyDisk", id: 411643860
 mas "Developer", id: 640199958
 mas "Folder Quick Look", id: 6753110395
 mas "Kindle", id: 302584613
-mas "Microsoft Excel", id: 462058435
 mas "MoneyWiz", id: 1511185140
 mas "PDF Viewer", id: 1120099014
 mas "TestFlight", id: 899247664
@@ -87,5 +85,4 @@ mas "TestFlight", id: 899247664
 mas "1Password for Safari", id: 1569813296
 mas "Noir", id: 1592917505
 mas "Save to Raindrop.io", id: 1549370672
-mas "Save to Reader", id: 1640236961
 mas "Wipr", id: 1662217862

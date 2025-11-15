@@ -1,10 +1,9 @@
 adjust-cursor-thickness = 1
 copy-on-select = clipboard
-font-feature = -calt
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-thicken = true
 font-thicken-strength = 75
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = cmd+f=write_screen_file:open
-macos-icon = official
 macos-option-as-alt = left
 theme = light:Adwaita, dark:Adwaita Dark
