@@ -3,7 +3,9 @@ tap "homebrew/bundle"
 
 # Binaries
 brew "aviator-co/tap/av"
+brew "bat"
 brew "btop"
+brew "delta"
 brew "fastfetch"
 brew "fd"
 brew "fzf"

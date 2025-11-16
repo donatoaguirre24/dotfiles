@@ -12,6 +12,11 @@ alias show_path_expanded='print -l $path' # Like show_path, but with ZSH hooks a
 alias speedtest='networkQuality'
 alias update_all='zap update all && chezmoi upgrade && mise self-update --yes && brewery'
 
+# Bat
+if [[ -v commands[bat] ]]; then
+  alias cat='bat'
+fi
+
 # FZF
 if [[ -v commands[fd] ]]; then
   alias find='fd --type f --hidden --follow --exclude .git'
@@ -36,9 +41,9 @@ fi
 # LSD
 if [[ -v commands[lsd] ]]; then
   alias ls='lsd'
-  alias ll='lsd -1A'
-  alias la='lsd -lA'
-  alias tree='lsd -l --tree --depth=2'
+  alias ll='lsd --almost-all --oneline'
+  alias la='lsd --almost-all --long'
+  alias tree='lsd --tree --depth=2'
 fi
 
 # Trash

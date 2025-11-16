@@ -13,12 +13,16 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore
 	ignorecase = false
+	pager = delta
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	process = git-lfs filter-process
-	required = true
-	smudge = git-lfs smudge -- %f
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    line-numbers = true
+
+[merge]
+    conflictStyle = zdiff3
 
 [http]
 	followRedirects = true
