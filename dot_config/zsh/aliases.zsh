@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # General
-alias brewery='brew update && brew upgrade && brew upgrade --cask && mas upgrade && brew cleanup'
+alias brewery='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 alias c='clear'
 alias cdd='trash ~/Library/Developer/Xcode/DerivedData/*'
 alias dotfiles="cursor $(chezmoi source-path)"
