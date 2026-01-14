@@ -4,7 +4,7 @@
 alias brewery='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 alias c='clear'
 alias cdd='trash ~/Library/Developer/Xcode/DerivedData/*'
-alias dotfiles="cursor $(chezmoi source-path)"
+alias dotfiles="$VISUAL $(chezmoi source-path)"
 alias reload="source $ZSHRC"
 alias show_packages_size='du -sh ./node_modules/* | sort -nr | rg "\dM.*"'
 alias show_path="tr ':' '\n' <<< \"$PATH\""
