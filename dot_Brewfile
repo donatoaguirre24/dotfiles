@@ -15,6 +15,7 @@ brew "jq"
 brew "lazygit"
 brew "lsd"
 brew "mas"
+brew "mise"
 brew "mole"
 brew "ripgrep"
 brew "ruby-build" # Required for Mise to install Ruby
