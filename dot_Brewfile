@@ -22,6 +22,7 @@ brew "ruby-build" # Required for Mise to install Ruby
 brew "starship"
 brew "tlrc"
 brew "watchman"
+brew "yazi"
 brew "zoxide"
 brew "zsh"
 
