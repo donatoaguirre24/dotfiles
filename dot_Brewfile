@@ -37,7 +37,6 @@ cask "font-sf-mono"
 cask "1password"
 cask "1password-cli"
 cask "android-studio"
-cask "appcleaner"
 cask "betterdisplay"
 cask "bettermouse"
 cask "brave-browser"
@@ -64,6 +63,7 @@ cask "visual-studio-code"
 cask "whatsapp"
 cask "xcodes"
 cask "zoom"
+cask "zed"
 
 # App Store
 mas "DaisyDisk", id: 411643860
