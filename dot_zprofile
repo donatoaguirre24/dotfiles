@@ -22,13 +22,16 @@ export MISE_NODE_DEFAULT_PACKAGES_FILE="$MISE_CONFIG_DIR/.default-npm-packages"
 export BAT_THEME_LIGHT="OneHalfLight"
 export BAT_THEME_DARK="OneHalfDark"
 
-export EDITOR="code --wait"
-export VISUAL="code"
+export DELTA_PAGER="less --mouse"
+
+export EDITOR="zed --wait"
+export VISUAL="zed"
 export LANG="en_US.UTF-8"
 export LANGUAGE="en"
 export LC_ALL="en_US.UTF-8"
 
 export PATH="/Applications/Obsidian.app/Contents/MacOS:$PATH" # Obsidian CLI
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"

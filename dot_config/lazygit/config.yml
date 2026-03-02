@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lazygit.json
+
 gui:
   nerdFontsVersion: "3"
 
 git:
   pagers:
-    - pager: delta --paging=never
+    - pager: ~/.config/lazygit/theme-aware-delta.sh --paging=never
