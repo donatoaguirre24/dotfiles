@@ -14,44 +14,44 @@ alias update_all='zap update all && chezmoi upgrade && mise self-update --yes &&
 
 # Bat
 if [[ -v commands[bat] ]]; then
-  alias cat='bat'
+    alias cat='bat'
 fi
 
 # FZF
 if [[ -v commands[fd] ]]; then
-  alias find='fd --type f --hidden --follow --exclude .git'
+    alias find='fd --type f --hidden --follow --exclude .git'
 fi
 
 # Docker
 if [[ -v commands[docker] ]]; then
-  alias dc=dc-fn # defined in functions.zsh
-  alias dcu='docker compose up -d'
-  alias dcd='docker compose down --remove-orphans'
-  alias dcr=dcr-fn # defined in functions.zsh
-  alias dex=dex-fn # defined in functions.zsh
-  alias dps='docker ps'
-  alias dpsa='docker ps -a'
+    alias dc=dc-fn # defined in functions.zsh
+    alias dcu='docker compose up -d'
+    alias dcd='docker compose down --remove-orphans'
+    alias dcr=dcr-fn # defined in functions.zsh
+    alias dex=dex-fn # defined in functions.zsh
+    alias dps='docker ps'
+    alias dpsa='docker ps -a'
 fi
 
 # Lazygit
 if [[ -v commands[lazygit] ]]; then
-  alias lg='lazygit'
+    alias lg='lazygit'
 fi
 
 # LSD
 if [[ -v commands[lsd] ]]; then
-  alias ls='lsd'
-  alias ll='lsd --almost-all --oneline'
-  alias la='lsd --almost-all --long'
-  alias tree='lsd --tree --depth=2'
+    alias ls='lsd'
+    alias ll='lsd --almost-all --oneline'
+    alias la='lsd --almost-all --long'
+    alias tree='lsd --tree --depth=2'
 fi
 
 # Trash
 if [[ -v commands[trash] ]]; then
-  alias rm='trash'
+    alias rm='trash'
 fi
 
 # Zoxide
 if [[ -v commands[zoxide] ]]; then
-  alias cd='z'
+    alias cd='z'
 fi

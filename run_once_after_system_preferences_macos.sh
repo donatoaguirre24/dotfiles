@@ -40,7 +40,7 @@ defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "0"
 defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
 
 for app in "Dock" \ "Finder" \ "SystemUIServer" \ "Xcode"; do
-  killall "${app}" >/dev/null 2>&1
+    killall "${app}" >/dev/null 2>&1
 done
 
 echo "System preferences have been updated"
