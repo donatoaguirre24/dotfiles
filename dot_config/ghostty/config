@@ -4,7 +4,6 @@ font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-thicken = true
 font-thicken-strength = 75
 keybind = global:cmd+grave_accent=toggle_quick_terminal
-keybind = cmd+f=write_screen_file:open
 keybind = cmd+shift+e=equalize_splits
 keybind = cmd+shift+f=toggle_split_zoom
 macos-option-as-alt = left
