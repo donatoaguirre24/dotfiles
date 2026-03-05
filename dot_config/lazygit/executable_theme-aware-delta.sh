@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check if dark mode is enabled (make sure to chmod +x this file)
+# Check if dark mode is enabled
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
     exec delta --dark "$@"
 else
