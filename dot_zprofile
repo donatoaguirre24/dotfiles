@@ -22,7 +22,7 @@ export MISE_NODE_DEFAULT_PACKAGES_FILE="$MISE_CONFIG_DIR/.default-npm-packages"
 export BAT_THEME_LIGHT="OneHalfLight"
 export BAT_THEME_DARK="OneHalfDark"
 
-export DELTA_PAGER="less --mouse"
+export DELTA_PAGER="less --mouse" # Required for mouse scrolling to work in Delta
 
 export EDITOR="zed --wait"
 export VISUAL="zed"
