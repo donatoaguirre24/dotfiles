@@ -1,8 +1,11 @@
 adjust-cursor-thickness = 1
+auto-update-channel = stable
 copy-on-select = clipboard
 font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-thicken = true
 font-thicken-strength = 75
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 10s
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = cmd+shift+e=equalize_splits
 keybind = cmd+shift+f=toggle_split_zoom
