@@ -27,9 +27,6 @@ brew "zoxide"
 brew "zsh"
 
 # Fonts
-cask "font-cascadia-mono"
-cask "font-cascadia-mono-nf"
-cask "font-commit-mono"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
@@ -42,13 +39,12 @@ cask "betterdisplay"
 cask "bettermouse"
 cask "brave-browser"
 cask "bruno"
-cask "devcleaner"
+cask "bysiber/cleardisk/cleardisk"
 cask "discord"
 cask "expo-orbit"
 cask "ghostty"
 cask "handbrake"
 cask "iina"
-cask "imageoptim"
 cask "latest"
 cask "music-decoy"
 cask "obsidian"
@@ -59,7 +55,6 @@ cask "shottr"
 cask "slack"
 cask "spotify"
 cask "stats"
-cask "stremio"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "xcodes"
@@ -68,11 +63,9 @@ cask "zed"
 
 # App Store
 mas "DaisyDisk", id: 411643860
-mas "Developer", id: 640199958
 mas "Folder Quick Look", id: 6753110395
 mas "Kindle", id: 302584613
 mas "MoneyWiz", id: 1511185140
-mas "PDF Viewer", id: 1120099014
 
 # Safari Extensions
 mas "1Password for Safari", id: 1569813296
