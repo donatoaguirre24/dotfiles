@@ -10,7 +10,7 @@ alias show_packages_size='du -sh ./node_modules/* | sort -nr | rg "\dM.*"'
 alias show_path="tr ':' '\n' <<< \"$PATH\""
 alias show_path_expanded='print -l $path' # Like show_path, but with ZSH hooks applied
 alias speedtest='networkQuality'
-alias update_all='zap update all && chezmoi upgrade && mise self-update --yes && brewery'
+alias update_all='zap update all && chezmoi upgrade && brewery'
 
 # Bat
 if [[ -v commands[bat] ]]; then

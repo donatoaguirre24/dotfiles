@@ -1,10 +1,10 @@
 [tools]
 node = "lts"
 java = "zulu-17"
-python = "3"
-ruby = "3"
-usage = "latest"
 uv = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "ruby"]
+
+[settings.ruby]
+compile = false
