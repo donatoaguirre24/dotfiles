@@ -40,8 +40,8 @@ defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "0"
 defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
 
 # Set key repeat rate to 1 (fast) and initial key repeat delay to 10 (short)
-defaults write -g KeyRepeat -int 1
-defaults write -g InitialKeyRepeat -int 10
+defaults write NSGlobalDomain "KeyRepeat" -int 1
+defaults write NSGlobalDomain "InitialKeyRepeat" -int 10
 
 for app in "Dock" \ "Finder" \ "SystemUIServer" \ "Xcode"; do
     killall "${app}" >/dev/null 2>&1
