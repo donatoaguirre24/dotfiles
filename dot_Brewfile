@@ -33,11 +33,11 @@ cask "font-sf-mono"
 # Apps
 cask "1password"
 cask "1password-cli"
-cask "android-studio"
 cask "betterdisplay"
 cask "bettermouse"
 cask "brave-browser"
 cask "bruno"
+cask "busycal"
 cask "discord"
 cask "expo-orbit"
 cask "ghostty"
@@ -45,6 +45,7 @@ cask "handbrake"
 cask "iina"
 cask "latest"
 cask "music-decoy"
+cask "netspot"
 cask "obsidian"
 cask "orbstack"
 cask "raycast"
@@ -57,7 +58,6 @@ cask "tablepro"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "xcodes"
-cask "zoom"
 cask "zed"
 
 # App Store
@@ -68,6 +68,4 @@ mas "MoneyWiz", id: 1511185140
 
 # Safari Extensions
 mas "1Password for Safari", id: 1569813296
-mas "Noir", id: 1592917505
-mas "Save to Raindrop.io", id: 1549370672
 mas "Wipr", id: 1662217862
