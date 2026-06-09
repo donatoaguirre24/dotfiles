@@ -22,7 +22,8 @@ defaults write com.apple.dock "show-recents" -bool "false"
 defaults write com.apple.dock "autohide" -bool "true"
 
 # Remove the Dock autohide delay, so the Dock appears instantly
-defaults write com.apple.dock "autohide-delay" -float "0"
+defaults write com.apple.dock "autohide-delay" -int 0
+defaults write com.apple.dock "autohide-time-modifier" -float 0.25
 
 # Do not reorder Spaces based on use
 defaults write com.apple.dock "mru-spaces" -bool "false"
@@ -34,7 +35,7 @@ defaults write com.apple.screencapture "location" -string "~/Downloads"
 defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Downloads"
 
 # Set trackpad weight to light
-defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "0"
+defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int 0
 
 # Show the build duration in the Xcode's toolbar
 defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
@@ -42,6 +43,9 @@ defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
 # Set key repeat rate to 1 (fast) and initial key repeat delay to 10 (short)
 defaults write NSGlobalDomain "KeyRepeat" -int 1
 defaults write NSGlobalDomain "InitialKeyRepeat" -int 10
+
+# Set FN/🌐 key to do nothing
+defaults write com.apple.HIToolbox AppleFnUsageType -int 0
 
 for app in "Dock" \ "Finder" \ "SystemUIServer" \ "Xcode"; do
     killall "${app}" >/dev/null 2>&1
