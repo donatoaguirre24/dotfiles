@@ -17,7 +17,6 @@ brew "mole"
 brew "ripgrep"
 brew "starship"
 brew "tlrc"
-brew "watchman"
 brew "yazi"
 brew "zoxide"
 brew "zsh"
@@ -35,11 +34,15 @@ cask "bettermouse"
 cask "brave-browser"
 cask "bruno"
 cask "busycal"
+cask "chatgpt"
+cask "codex"
+cask "codex-app"
 cask "discord"
 cask "expo-orbit"
 cask "ghostty"
 cask "handbrake"
 cask "iina"
+cask "karabiner-elements"
 cask "latest"
 cask "music-decoy"
 cask "netspot"
@@ -49,9 +52,11 @@ cask "raycast"
 cask "sf-symbols"
 cask "shottr"
 cask "slack"
+cask "spokenly"
 cask "spotify"
 cask "stats"
 cask "tablepro"
+cask "thaw"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "xcodes"
@@ -62,6 +67,7 @@ mas "DaisyDisk", id: 411643860
 mas "Folder Quick Look", id: 6753110395
 mas "Kindle", id: 302584613
 mas "MoneyWiz", id: 1511185140
+mas "Little Snitch Mini", id: 1629008763
 
 # Safari Extensions
 mas "1Password for Safari", id: 1569813296
