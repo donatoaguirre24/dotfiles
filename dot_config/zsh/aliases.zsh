@@ -46,11 +46,6 @@ if [[ -v commands[lsd] ]]; then
     alias tree='lsd --tree --depth=2'
 fi
 
-# Trash
-if [[ -v commands[trash] ]]; then
-    alias rm='trash'
-fi
-
 # Zoxide
 if [[ -v commands[zoxide] ]]; then
     alias cd='z'
