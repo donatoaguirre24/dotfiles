@@ -2,6 +2,8 @@
 node = "lts"
 java = "zulu-17"
 uv = "latest"
+"npm:@antfu/ni" = "latest"
+"npm:npm-check-updates" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "ruby"]
