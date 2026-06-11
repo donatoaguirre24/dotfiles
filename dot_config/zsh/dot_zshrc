@@ -37,6 +37,9 @@ source "$ZDOTDIR/aliases.zsh"
 # Functions
 source "$ZDOTDIR/functions.zsh"
 
+# FZF configuration
+source "$ZDOTDIR/fzfconfig.zsh"
+
 # ZSH plugins
 plug "chivalryq/git-alias"
 plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets

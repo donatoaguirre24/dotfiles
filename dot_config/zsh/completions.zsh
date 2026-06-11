@@ -33,10 +33,10 @@ else
 fi
 
 # Completion styling
-local PREVIEW_COMMAND='lsd --almost-all --color=always --icon=always $realpath'
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'         # Case-insensitive completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"        # Enable filename colorizing
-zstyle ':completion:*' menu no                                 # Disable menu completion
-zstyle ':fzf-tab:complete:cd:*' fzf-preview "$PREVIEW_COMMAND" # Use lsd to preview contents
-zstyle ':fzf-tab:complete:z:*' fzf-preview "$PREVIEW_COMMAND"  # Complete Zoxide's paths
-zstyle ':fzf-tab:*' switch-group '<' '>'                       # Use arrows to switch between groups
+local PREVIEW_DIR='lsd --almost-all --color=always --icon=always $realpath'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'     # Case-insensitive completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"    # Enable filename colorizing
+zstyle ':completion:*' menu no                             # Disable menu completion
+zstyle ':fzf-tab:complete:cd:*' fzf-preview "$PREVIEW_DIR" # Use lsd to preview contents
+zstyle ':fzf-tab:complete:z:*' fzf-preview "$PREVIEW_DIR"  # Complete Zoxide's paths
+zstyle ':fzf-tab:*' switch-group '<' '>'                   # Use arrows to switch between groups

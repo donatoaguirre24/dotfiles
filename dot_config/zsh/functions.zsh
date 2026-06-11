@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Force rebuild ZSH completions
 rebuild-completions() {
     rm "$ZDOTDIR/.zcompdump"
@@ -111,30 +113,4 @@ dcr-fn() {
 
 dex-fn() {
     docker exec -it $1 ${2:-bash}
-}
-
-# FZF
-# Use fd for listing path candidates
-_fzf_compgen_path() {
-    fd --hidden --exclude .git . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-    fd --hidden --type directory --exclude .git . "$1"
-}
-
-local show_file_or_dir_preview="if [ -d {} ]; then lsd -A --color=always {} | head -200; else bat --style=numbers --color=always --line-range=:500 {}; fi"
-
-# Use custom previews when fuzzy-completing commands
-_fzf_comprun() {
-    local command=$1
-
-    shift
-
-    case "$command" in
-        cd)           fzf --preview "lsd -A --color=always --icon=always {} | head -200" "$@" ;;
-        export|unset) fzf --preview "eval 'echo $'{}"                                    "$@" ;;
-        *)            fzf --preview "$show_file_or_dir_preview"                          "$@" ;;
-    esac
 }
