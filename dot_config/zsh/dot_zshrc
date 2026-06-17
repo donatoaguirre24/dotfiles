@@ -48,7 +48,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
 
 # Shell integrations
-source <(av completion zsh)
 source <(fzf --zsh)
 source <(zoxide init zsh)
 
