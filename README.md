@@ -15,7 +15,7 @@
 3. Install the software listed in ~/.Brewfile
 
     ```sh
-    brew bundle check --global
+    brew bundle check --global --no-upgrade --verbose
     brew bundle --global --no-lock
     ```
 
