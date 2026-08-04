@@ -2,7 +2,6 @@ agent_notes = true
 exclude_untracked = false
 hunk_headers = false
 line_numbers = false
-menu_bar = false
 mode = "auto"
 theme = "auto"
 wrap_lines = true

@@ -6,5 +6,5 @@ gui:
   shrinkSidePanelsToContent: true
 
 git:
-  pagers:
-    - pager: ~/.config/lazygit/theme-aware-delta.sh --paging=never
+  diffRenderers:
+    - command: ~/.config/lazygit/theme-aware-delta.sh --paging=never
