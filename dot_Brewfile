@@ -1,5 +1,4 @@
 # Binaries
-brew "aviator-co/tap/av"
 brew "bat"
 brew "btop"
 brew "fastfetch"
