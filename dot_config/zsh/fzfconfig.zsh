@@ -6,25 +6,25 @@ dir_or_file_preview="if [ -d {} ]; then $dir_preview; else $file_preview; fi"
 
 # Use custom previews when fuzzy-completing commands
 _fzf_comprun() {
-    local command=$1
-    shift
+  local command=$1
+  shift
 
-    case "$command" in
-        cd)           fzf --preview "$dir_preview"         "$@" ;;
-        export|unset) fzf --preview "eval 'echo \$'{}"     "$@" ;;
-        ssh)          fzf --preview 'dig {}'               "$@" ;;
-        *)            fzf --preview "$dir_or_file_preview" "$@" ;;
-    esac
+  case "$command" in
+    cd)           fzf --preview "$dir_preview"         "$@" ;;
+    export|unset) fzf --preview "eval 'echo \$'{}"     "$@" ;;
+    ssh)          fzf --preview 'dig {}'               "$@" ;;
+    *)            fzf --preview "$dir_or_file_preview" "$@" ;;
+  esac
 }
 
 # Use fd for listing path candidates
 _fzf_compgen_path() {
-    fd --hidden --exclude .git . "$1"
+  fd --hidden --exclude .git . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-    fd --hidden --type directory --exclude .git . "$1"
+  fd --hidden --type directory --exclude .git . "$1"
 }
 
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --follow --hidden --exclude .git"

@@ -48,7 +48,7 @@ defaults write NSGlobalDomain "InitialKeyRepeat" -int 10
 defaults write com.apple.HIToolbox AppleFnUsageType -int 0
 
 for app in "Dock" \ "Finder" \ "SystemUIServer" \ "Xcode"; do
-    killall "${app}" >/dev/null 2>&1
+  killall "${app}" >/dev/null 2>&1
 done
 
 echo "System preferences have been updated"
