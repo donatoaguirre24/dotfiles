@@ -3,25 +3,26 @@
 	squash = !git reset --soft
 
 [color]
-	ui = true
+	ui = auto
 
 [core]
-	autocrlf = input
-	excludesfile = ~/.gitignore
-	ignorecase = false
 	pager = delta
+	excludesfile = ~/.gitignore
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [merge]
-    conflictStyle = zdiff3
+  conflictStyle = zdiff3
 
 [http]
 	followRedirects = true
 
 [init]
 	defaultBranch = main
+
+[fetch]
+  prune = true
 
 [pull]
 	ff = only
