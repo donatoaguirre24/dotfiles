@@ -1,4 +1,6 @@
-#!/usr/bin/env zsh
+#!/bin/bash
+
+set -eufo pipefail
 
 # Show all file extensions in the Finder
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
