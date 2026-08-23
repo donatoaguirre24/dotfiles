@@ -1,0 +1,37 @@
+[alias]
+  repush = !git add --all && git commit --amend --no-edit && git push --force-with-lease
+
+[color]
+  ui = auto
+
+[core]
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[merge]
+  conflictStyle = zdiff3
+
+[http]
+  followRedirects = true
+
+[init]
+  defaultBranch = main
+
+[fetch]
+  prune = true
+
+[pull]
+  ff = only
+
+[push]
+  autoSetupRemote = true
+  default = simple
+
+[safe]
+  directory = *
+
+[user]
+  name = Donato Aguirre
+  email = {{ .email }}
