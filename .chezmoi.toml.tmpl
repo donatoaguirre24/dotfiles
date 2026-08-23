@@ -1,4 +1,10 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $email := promptString "What is your email" -}}
+{{- $choices := list "personal" "work" -}}
+{{- $profile := promptChoice "What type of setup do you want" $choices -}}
 
 [data]
     email = {{ $email | quote }}
+    profile = {{ $profile | quote }}
+
+[diff]
+    pager = "delta"

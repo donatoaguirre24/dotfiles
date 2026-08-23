@@ -1,0 +1,82 @@
+brew "bat"
+brew "btop"
+brew "fastfetch"
+brew "fd"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "git-delta"
+brew "glow"
+brew "herdr"
+brew "hunk"
+brew "jq"
+brew "lazygit"
+brew "lsd"
+brew "mas"
+brew "mise"
+brew "mole"
+brew "ripgrep"
+brew "starship"
+brew "tlrc"
+brew "yazi"
+brew "zoxide"
+brew "zsh"
+{{- if eq .profile "work" }}
+brew "libpq"
+brew "simslim"
+brew "watchman"
+{{- end }}
+
+cask "betterdisplay"
+cask "bettermouse"
+cask "busycal"
+cask "codex"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-sf-mono"
+cask "ghostty"
+cask "handbrake-app"
+cask "latest"
+cask "music-decoy"
+cask "obsidian"
+cask "raycast"
+cask "sf-symbols"
+cask "shottr"
+cask "spotify"
+cask "stats"
+cask "tablepro"
+cask "zed"
+{{- if eq .profile "personal" }}
+cask "1password"
+cask "1password-cli"
+cask "brave-origin"
+cask "bruno"
+cask "chatgpt"
+cask "discord"
+cask "iina"
+cask "karabiner-elements"
+cask "netspot"
+cask "orbstack"
+cask "slack"
+cask "spokenly"
+cask "stremio"
+cask "thaw"
+cask "whatsapp"
+{{- end }}
+{{- if eq .profile "work" }}
+cask "android-studio"
+cask "claude-code"
+cask "cursor-cli"
+cask "expo-orbit"
+cask "loom"
+cask "proxyman"
+cask "xcodes-app"
+{{- end }}
+
+mas "Folder Quick Look", id: 6753110395
+mas "Wipr", id: 1662217862
+{{- if eq .profile "personal" }}
+mas "DaisyDisk", id: 411643860
+mas "Kindle", id: 302584613
+mas "MoneyWiz", id: 1511185140
+{{- end }}
