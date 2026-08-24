@@ -10,7 +10,7 @@
 
     ```sh
     brew bundle check --global --no-upgrade --verbose
-    brew bundle --global
+    brew bundle --global --verbose
     ```
 
 3. Install Mise tools
