@@ -1,3 +1,7 @@
+{{- if eq .profile "work" -}}
+tap "mobai-app/tap"
+{{- end }}
+
 brew "bat"
 brew "btop"
 brew "fastfetch"
@@ -23,7 +27,7 @@ brew "zoxide"
 brew "zsh"
 {{- if eq .profile "work" }}
 brew "libpq"
-brew "mobai-app/tap/simslim"
+brew "simslim"
 brew "watchman"
 {{- end }}
 
