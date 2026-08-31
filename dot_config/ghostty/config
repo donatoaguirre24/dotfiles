@@ -12,4 +12,5 @@ keybind = cmd+shift+f=toggle_split_zoom
 macos-option-as-alt = left
 unfocused-split-fill = "#000000"
 unfocused-split-opacity = 0.90
+shell-integration-features = ssh-env,ssh-terminfo,sudo
 theme = light:Adwaita, dark:Adwaita Dark
