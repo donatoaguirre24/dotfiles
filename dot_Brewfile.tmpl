@@ -1,7 +1,3 @@
-{{- if eq .profile "work" -}}
-tap "mobai-app/tap"
-{{- end }}
-
 brew "bat"
 brew "btop"
 brew "fastfetch"
@@ -27,7 +23,7 @@ brew "zoxide"
 brew "zsh"
 {{- if eq .profile "work" }}
 brew "libpq"
-brew "simslim"
+brew "mobai-app/tap/simslim", trusted: true
 brew "watchman"
 {{- end }}
 
@@ -64,7 +60,6 @@ cask "orbstack"
 cask "slack"
 cask "spokenly"
 cask "stremio"
-cask "thaw"
 cask "whatsapp"
 {{- end }}
 {{- if eq .profile "work" }}
@@ -81,6 +76,7 @@ cask "xcodes-app"
 mas "Folder Quick Look", id: 6753110395
 mas "Wipr", id: 1662217862
 {{- if eq .profile "personal" }}
+mas "1Password for Safari", id: 1569813296
 mas "DaisyDisk", id: 411643860
 mas "Kindle", id: 302584613
 mas "MoneyWiz", id: 1511185140
