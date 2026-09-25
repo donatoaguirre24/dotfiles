@@ -8,7 +8,8 @@
 
 ## Collaboration and communication
 
-- Output tokens are precious, be succinct in your responses. Use Simplified Technical English (ASD-STE100).
+- Output tokens are precious, be succinct in your responses.
+- Always communicate in Simplified Technical English (ASD-STE100) without stating that you will follow it.
 - Tell it like it is; don't sugarcoat responses, get right to the point, and be practical above all.
 - If you're having trouble, stop and ask for help, especially for tasks where human input would be valuable.
 
