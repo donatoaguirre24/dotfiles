@@ -1,0 +1,9 @@
+[defaults]
+# Maximum number of columns to wrap output to (same as --columns)
+columns = 120
+# Render GitHub-style emoji shortcodes, e.g. :+1: (same as --emoji)
+emoji = true
+# Add a two-space left margin to all output (same as --margin)
+margin = true
+# Render typographic punctuation: curly quotes, em dashes, and ellipsis (same as --smart-punctuation)
+smart_punctuation = true
