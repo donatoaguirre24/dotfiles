@@ -1,16 +1,24 @@
 adjust-cursor-thickness = 1
 auto-update-channel = stable
 copy-on-select = clipboard
-font-family = "JetBrainsMonoNL Nerd Font Mono"
+font-family = JetBrainsMonoNL Nerd Font Mono
 font-thicken = true
 font-thicken-strength = 75
 notify-on-command-finish = unfocused
 notify-on-command-finish-after = 10s
-keybind = global:cmd+grave_accent=toggle_quick_terminal
-keybind = cmd+shift+e=equalize_splits
-keybind = cmd+shift+f=toggle_split_zoom
 macos-option-as-alt = left
-unfocused-split-fill = "#000000"
+unfocused-split-fill = #000000
 unfocused-split-opacity = 0.90
 shell-integration-features = ssh-env,ssh-terminfo,sudo
 theme = light:Adwaita, dark:Adwaita Dark
+
+# Quick terminal
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+# Splits
+keybind = cmd+shift+e=equalize_splits
+keybind = cmd+shift+f=toggle_split_zoom
+
+# Text selection: Cmd+Shift = to line start/end
+keybind = cmd+shift+left=text:\x1b[1;2H
+keybind = cmd+shift+right=text:\x1b[1;2F

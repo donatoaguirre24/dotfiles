@@ -2,11 +2,6 @@
 
 [ -f "$XDG_DATA_HOME/zap/zap.zsh" ] && source "$XDG_DATA_HOME/zap/zap.zsh"
 
-# Keybindings
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
-bindkey "\ew" kill-region # Fixes "cmd + delete" in Ghostty
-
 # General settings
 unsetopt BEEP               # Disable the bell
 setopt AUTO_CD              # Change the directory without cd
@@ -28,24 +23,22 @@ setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry
 setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries in the history file
 setopt HIST_VERIFY            # Don't execute immediately upon history expansion
 
-# Completions
+# Local config
 source "$ZDOTDIR/completions.zsh"
-
-# Aliases
 source "$ZDOTDIR/aliases.zsh"
-
-# Functions
 source "$ZDOTDIR/functions.zsh"
-
-# FZF configuration
 source "$ZDOTDIR/fzfconfig.zsh"
 
 # ZSH plugins
 plug "chivalryq/git-alias"
 plug "Aloxaf/fzf-tab" # Must be loaded after compinit and before plugins that wrap widgets
+plug "jirutka/zsh-shift-select"
 plug "zsh-users/zsh-autosuggestions"
-plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
+
+# Keybindings
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 # Shell integrations
 source <(fzf --zsh)
@@ -53,3 +46,4 @@ source <(zoxide init zsh)
 
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
+eval "$(zsh-patina activate)"
