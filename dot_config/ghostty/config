@@ -1,14 +1,12 @@
 adjust-cursor-thickness = 1
 auto-update-channel = stable
-copy-on-select = clipboard
+copy-on-select = both
 font-family = JetBrainsMonoNL Nerd Font Mono
 font-thicken = true
 font-thicken-strength = 75
 notify-on-command-finish = unfocused
 notify-on-command-finish-after = 10s
 macos-option-as-alt = left
-unfocused-split-fill = #000000
-unfocused-split-opacity = 0.90
 shell-integration-features = ssh-env,ssh-terminfo,sudo
 theme = light:Adwaita, dark:Adwaita Dark
 
