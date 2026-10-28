@@ -30,7 +30,6 @@
 
 - Never skip, evade or disable a pre-commit hook.
 - The primary method for interacting with GitHub should be the GitHub CLI.
-- Do not add yourself as a co-author on commits or pull requests.
 
 ## Testing
 
