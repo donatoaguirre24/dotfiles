@@ -27,7 +27,6 @@ brew "mobai-app/tap/simslim", trusted: true
 brew "watchman"
 {{- end }}
 
-cask "abue-ammar/tinycast/tinycast", trusted: true
 cask "betterdisplay"
 cask "bettermouse"
 cask "busycal"
@@ -45,6 +44,7 @@ cask "shottr"
 cask "spotify"
 cask "stats"
 cask "tablepro"
+cask "tinycast"
 cask "zed"
 {{- if eq .profile "personal" }}
 cask "1password"
@@ -72,10 +72,9 @@ cask "xcodes-app"
 {{- end }}
 
 mas "Folder Quick Look", id: 6753110395
-mas "Wipr", id: 1662217862
 {{- if eq .profile "personal" }}
 mas "1Password for Safari", id: 1569813296
 mas "DaisyDisk", id: 411643860
 mas "Kindle", id: 302584613
-mas "MoneyWiz", id: 1511185140
+mas "Wipr", id: 1662217862
 {{- end }}
